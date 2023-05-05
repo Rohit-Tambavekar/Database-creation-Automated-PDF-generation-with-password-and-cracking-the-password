@@ -4,25 +4,25 @@ Introduction:
 
 The ABC Bank PDF Password Generator and Cracker is a project aimed at providing a secure and user-friendly way for clients of ABC Bank to generate and retrieve password-protected PDF documents containing their sensitive financial information. The project consists of three separate codes, each serving a unique purpose in the overall process.
 
-Code 1:
+CreatePostgressAcc.py :
 
-The first code creates a database for ABC Bank and allows the user to input and retrieve client details. This database is an essential component of the project and is required for the remaining two codes to function correctly.
+The first code file creates a database for ABC Bank and allows the user to input and retrieve client details. This database is an essential component of the project and is required for the remaining two codes to function correctly.
 
-Code 2:
+CreatePDF.py :
 
-The second code uses the database created in code 1 to retrieve the names of ABC Bank clients. The user is prompted to input the name of the client for whom they wish to generate a password-protected PDF document. The code then generates a PDF file containing the client's financial information, with a password automatically generated based on the client's date of birth.
+The second code file uses the database created in CreatePostgressAcc.py to retrieve the names of ABC Bank clients. The user is prompted to input the name of the client for whom they wish to generate a password-protected PDF document. The code then generates a PDF file containing the random lorem sentences, with a password automatically generated based on the client's date of birth.
 
-Code 3:
+CheckForPass.py :
 
 The third code allows the user to attempt to crack the password of a password-protected PDF document. The user is prompted to input the name of the PDF file they wish to crack, and the code will search the user's computer for the file. If the file is found, the code will attempt to crack the password by iterating through all possible number combinations.
 
 Installation:
 
-To use this project, the user must first download the code files and install Python 3.8 or higher. Additionally, the user must install the PyPDF2 and Pandas libraries.
+To use this project, the user must first download the code files and install Python 3.8 or higher. Additionally, the user must install the PyMuPDF and Pandas libraries.
 
 Usage:
 
-To use the ABC Bank PDF Password Generator and Cracker, the user must first run code 1 to create the necessary database. After this step is complete, the user can run code 2 to generate a password-protected PDF document for a specific client, or code 3 to attempt to crack the password of an existing PDF document.
+To use the ABC Bank PDF Password Generator and Cracker, the user must first run CreatePostgressAcc.py to create the necessary database. After this step is complete, the user can run CreatePDF.py to generate a password-protected PDF document for a specific client, or CheckForPass.py to attempt to crack the password of an existing PDF document.
 
 Limitations:
 
