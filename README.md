@@ -18,7 +18,7 @@ The third code allows the user to attempt to crack the password of a password-pr
 
 ### **Installation:**
 
-To use this project, the user must first download the code files and install Python 3.8 or higher. Additionally, the user must install the PyMuPDF and Pandas libraries.
+To use this project, the user must first download the code files and install `Python 3.8 or higher`. Additionally, the user must install the `PyMuPDF` and `Pandas` libraries.
 
 ### **Usage:**
 
