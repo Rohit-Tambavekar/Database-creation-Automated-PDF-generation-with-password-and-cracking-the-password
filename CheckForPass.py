@@ -1,15 +1,13 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
-
-
+#Import necessary libraries
 import fitz, numpy as np, os, shutil
 
+#Define a class for PDF password cracking
 class PDFPasswordCracker:
+    # Constructor method
     def __init__(self):
-        self.doc_pass = np.arange(0,10000)
+        self.doc_pass = np.arange(0,10000)  # Generate an array of all possible passwords
     
+    # Method to search for a file in all available drives
     def find_file(self, file_for_name):
         """
         Searches for a file in all available drives and returns its path
@@ -27,11 +25,8 @@ class PDFPasswordCracker:
                             print(f"File {file} found at: {file_path}")
                             return file_path
         return None
-    
+    # Method to attempt to crack the password of a given PDF file
     def crack_password(self, file_path):
-        """
-        Attempts to crack the password of a given PDF file
-        """
         doc = fitz.open(file_path)
         if doc.needs_pass:
             for x in self.doc_pass:
@@ -45,12 +40,9 @@ class PDFPasswordCracker:
         else:
             print("No Authentication Required")
         return False
-    
+    # Method to prompt the user for input and start the PDF password cracking process
     def start(self):
-        """
-        Starts the PDF password cracking process by prompting the user for input
-        """
-        while True:
+       while True:
             file_for_name = input("Input the pdf name to crack the password on this PC(): ")
             
             # If user inputs 'cancel' or 'exit', terminate the program
@@ -67,17 +59,8 @@ class PDFPasswordCracker:
             # Attempt to crack the password
             if self.crack_password(file_path):
                 break
-
-
-# In[22]:
-
-
+#Create an instance of the PDFPasswordCracker class and start the password cracking process
 cracker = PDFPasswordCracker()
 cracker.start()
-
-
-# In[ ]:
-
-
 
 
